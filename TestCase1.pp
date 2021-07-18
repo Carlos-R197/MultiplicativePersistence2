@@ -17,6 +17,7 @@ type
     procedure FirstTest;
 	procedure SecondTest;
 	procedure ThirdTest;
+	procedure FourthTest;
   end;
   
 implementation
@@ -45,6 +46,12 @@ procedure TTestCase1.ThirdTest;
 begin
   AssertEquals(5, FPersistence.Persistence(796));
 end;
+
+procedure TTestCase1.FourthTest;
+begin
+  AssertEquals(2, FPersistence.Persistence(-814));
+end;
+
 
 initialization
   RegisterTest(TTestCase1);

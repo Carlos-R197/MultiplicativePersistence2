@@ -17,6 +17,9 @@ var
   NumberOfTimes: Integer;
   Temp: Integer;
 begin
+  if Num < 0 then
+    Num:= Num * -1;
+
   NumberOfTimes:= 0;
   while Num > 9 do
   begin
