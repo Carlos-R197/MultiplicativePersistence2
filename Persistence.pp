@@ -13,8 +13,23 @@ type
 implementation
 
 function TPersistence.Persistence(Num: Integer): Integer;
+var
+  NumberOfTimes: Integer;
+  Temp: Integer;
 begin
-  Result:= 0;
+  NumberOfTimes:= 0;
+  while Num > 9 do
+  begin
+    Temp:= 1;
+	while Num > 0 do
+	begin
+	  Temp:= Temp * (Num mod 10);
+	  Num:= Num div 10;
+	end;
+	Num:= Temp;
+	NumberOfTimes:= NumberOfTimes + 1;
+  end;
+  Result:= NumberOfTimes;
 end;
 
 end.
